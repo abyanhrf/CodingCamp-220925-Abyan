@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/forms@4"></script>
 </head>
 <body>
-    <header class="bg-[#3C467B] flex h-[60px] items-center justify-between p-[10px] border-b border-black">
+    <header class="bg-[#3C467B] flex h-[60px] items-center justify-between p-[10px] border-b border-black sticky top-0 z-50">
         <div class="logo">
             <img src="gambar/logo2.png" alt="Logo">
 
@@ -19,19 +19,19 @@
             <nav>
                 <ul class="flex h-[100%] items-center gap-[7px]">
                     <li><a class="bg-[#50589C] text-white border p-[8px] border-black rounded 
-                        hover:bg-[#636CCB]
+                        hover:bg-[#636CCB]  transition-colors duration-500 ease-in-out
                         active:bg-gray-500 border-black" 
                         href="#home">Home</a></li>
                     <li><a class="bg-[#50589C] text-white border p-[8px] border-black rounded 
-                        hover:bg-[#636CCB]
+                        hover:bg-[#636CCB]  transition-colors duration-500 ease-in-out
                         active:bg-gray-500 border-black" 
                         href="#profile">Profile</a></li>
                     <li><a class="bg-[#50589C] text-white border p-[8px] border-black rounded 
-                        hover:bg-[#636CCB]
+                        hover:bg-[#636CCB]  transition-colors duration-500 ease-in-out
                         active:bg-gray-500 border-black" 
                         href="#portfolio">Portfolio</a></li>
                     <li><a class="bg-[#50589C] text-white border p-[8px] border-black rounded 
-                        hover:bg-[#636CCB]
+                        hover:bg-[#636CCB]  transition-colors duration-500 ease-in-out
                         active:bg-gray-500 border-black" 
                         href="#message-us">Message Us</a></li>
                 </ul>
@@ -40,12 +40,69 @@
     </header>
 
     <main>
+        <!-- Home Section -->
+        <section id="home" class="bg-[#1B3C53] text-white min-h-[50vh] flex flex-col justify-center items-center gap-[20px]">
+            <h1 class="text-[36px] font-bold">Welcome <span id="username"></span> to My Portfolio</h1>
+            <p class="text-[18px]">This is the home section of my portfolio website.</p>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="bg-[#234C6A] text-white min-h-[60vh] grid grid-cols-1 md:grid-cols-2 items-center px-10 gap-[20px]">
+    
+             <!-- Kiri -->
+            <div>
+                <h2 class="text-[30px] font-bold mb-4">Profile</h2>
+                <p class="text-[25px] mb-3"><span class="hello-world">Hello World</span>, <span class="my-name">I am Abyan</span>.</p>
+                <p class="text-[18px] leading-relaxed">I am a web developer with a passion for creating beautiful and functional websites, A skilled student in Informatics with a broad interest in technology and innovation. He was a leader in a scientific organization and a lecturer at a leading school in Indonesia.
+                </p>
+            </div>
+
+            <!-- Kanan -->
+            <div class="flex justify-center border-black">
+                <img class="w-[220px] h-[220px] rounded-full border-4 border-white shadow-lg" src="gambar/mukajelekawokwow.jpeg" alt="Profile Picture">
+            </div>
+
+</section>
+
+        <hr>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="bg-[#456882] text-white in-h-[50vh] flex flex-col justify-center items-center gap-[20px]">
+            <h2 class="text-[30px] font-bold">Portfolio</h2>
+            <p class="text-[18px]">This section showcases my projects and work.</p>
+        </section>
+
+        <hr>
+
+         <!-- Message Us Section -->
+        <section id="message-us" class="bg-[#607584] text-white min-h-[50vh] flex flex-col justify-center items-center gap-[20px]">
+            <h2 class="text-[30px] font-bold">Message Us</h2>
+            <form>
+                <div class="mb-[10px]">
+                    <label for="name" class="block mb-[5px]">Name:</label>
+                    <input type="text" id="name" name="name" class="border p-[8px] rounded w-[300px]" required>
+                </div>
+                <div class="mb-[10px]">
+                    <label for="email" class="block mb-[5px]">Email:</label>
+                    <input type="email" id="email" name="email" class="border p-[8px] rounded w-[300px]" required>
+                </div>
+                <div class="mb-[10px]">
+                    <label for="message" class="block mb-[5px]">Message:</label>
+                    <textarea id="message" name="message" class="border p-[8px] rounded w-[300px] h-[100px]"
+                        required></textarea>
+                </div>
+                <button type="button" onclick="validateForm()"
+                    class="bg-blue-500 text-white p-[10px] rounded hover:bg-blue-600">Send</button>
+            </form>
+        </section>
 
     </main>
 
     <footer>
-
+         <p class="text-center p-[20px] bg-gray-200">© 2025 Yama's Portfolio. All rights reserved.</p>
     </footer>
-    <script src="js/script.js"></script>
+
+    <!-- <script src="js/script.js"></script> -->
+
 </body>
 </html>
