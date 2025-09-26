@@ -12,7 +12,6 @@ function welcomeMessage() {
 }
 
 function validateForm() {
-    
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let message = document.getElementById("message").value;
@@ -34,9 +33,13 @@ function validateForm() {
         return;
     }
 
-    alert(`Terima kasih, ${name}! Formulir berhasil dikirim!`);
+    document.getElementById("output-name").innerText = name;
+    document.getElementById("output-email").innerText = email;
+    document.getElementById("output-message").innerText = message;
+    document.getElementById("output-box").classList.remove("hidden");
 
     document.getElementById("name").value = "";
     document.getElementById("email").value = "";
     document.getElementById("message").value = "";
 }
+
